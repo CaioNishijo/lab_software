@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.title{
+    margin-left: 2%;
+    margin-top: 1em;
+}
+.title h1{
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.7em;
+}
+.title hr{
+    margin-top: .5em;
+}
