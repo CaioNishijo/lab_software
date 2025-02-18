@@ -7,9 +7,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .title{
-    margin-left: 2%;
-    margin-top: 1em;
-    width: 30%;
+    margin: 1em 2%;
 }
 .title h1{
     text-transform: uppercase;
@@ -19,4 +17,40 @@
     margin-top: .3em;
     height: 3px;
     background-color: #111111;
+}
+.lista{
+    margin: 1em 2%;
+}
+.semana{
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    padding: .3em;
+    margin-bottom: .3em;
+    text-transform: uppercase;
+}
+.semana:hover{
+    background-color: #AAAAAA;
+    cursor: pointer;
+}
+.lista ul{
+    list-style-type: none;
+    margin-left: 2%;
+    margin-top: 1em;
+}
+.lista li{
+    margin-bottom: 1.5em;
+}
+.lista a{
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    padding: .3em;
+}
+.lista a:hover{
+    background-color: #AAAAAA;
+}
+div.lista > ul:nth-child(2) {
+    display: none;
 }
