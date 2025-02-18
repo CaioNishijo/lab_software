@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 03</title>
+</head>
+<body>
+    
+    <script type="text/javascript" language="javascript">
+        let numero;
+        do{
+            numero = window.prompt("Digite um número inteiro positivo");
+            numero = parseInt(numero);
+        } while(isNaN(numero));
+        let resultado = 1;
+        for(let i = numero; i > 1; i--){
+            resultado = resultado * i;
+        }
+        window.alert("O fatorial é "+resultado);
+    </script>
+</body>
+</html>

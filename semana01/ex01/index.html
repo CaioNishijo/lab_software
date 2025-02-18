@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 01</title>
+</head>
+<body>
+    
+    <script type="text/javascript" language="javascript">
+        let numero;
+        do{
+            numero = window.prompt("Digite um número inteiro positivo");
+            numero = parseInt(numero);
+        } while(isNaN(numero));
+        
+        if(numero % 2 == 0){
+            window.alert("O número é par");
+        } else{
+            window.alert("O número é ímpar");
+        }
+
+    </script>
+</body>
+</html>

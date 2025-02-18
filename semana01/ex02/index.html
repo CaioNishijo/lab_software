@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 02</title>
+</head>
+<body>
+    
+    <script type="text/javascript" language="javascript">
+        let numero;
+        do{
+            numero = window.prompt("Digite um número inteiro positivo");
+            numero = parseInt(numero);
+        } while(isNaN(numero));
+        
+        if(numero <= 1){
+            window.alert("Não é primo");
+        } else if(numero == 2){
+            window.alert("O número é primo");
+        } else{
+            let ePrimo = 1;
+            for(let i = 2; i < numero; i++){
+                if((numero % i) == 0){
+                    ePrimo = 0;
+                    break;
+                }
+            }
+            if(ePrimo){
+                window.alert("O número é primo");
+            } else {
+                window.alert("O número não é primo");
+            }
+        }
+    </script>
+</body>
+</html>
