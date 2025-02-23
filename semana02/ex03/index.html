@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 03</title>
+</head>
+<body>
+    <input type="text" placeholder="Digite uma palavra" id="input">
+    <button type="submit" id="enviar">Enviar</button>
+
+    <h1 id="palindromo"></h1>
+    <script>
+        let input = document.getElementById("input");
+        let enviar = document.getElementById("enviar");
+        let textoPalindromo = document.getElementById("palindromo");
+
+        let palavra;
+        let palavraInvertida = "";
+
+        enviar.addEventListener("click", () => {
+            palavra = input.value;
+
+            for(let i = palavra.length - 1; i >= 0; i--){
+                palavraInvertida = palavraInvertida + palavra[i];
+            }
+
+            if(palavra == palavraInvertida){
+                textoPalindromo.innerText = "É palíndromo";
+            } else{
+                textoPalindromo.innerText = "Não é palíndromo";
+            }
+        })
+    </script>
+</body>
+</html>

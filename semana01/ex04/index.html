@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 04</title>
+</head>
+<body>
+    <h1 id="tipo_dado"></h1>
+    <script type="text/javascript" language="javascript">
+        const textTipoDado = document.getElementById("tipo_dado");
+        let dado;
+        let querTipo = 0;
+        dado = window.prompt("Digite algum dado: ");
+
+        querTipo = window.confirm("Você deseja ver o tipo de dado?");
+
+        if(querTipo){
+            textTipoDado.innerText = typeof dado;
+        } else{
+            textTipoDado.innerText = "Obrigado por visitar a página";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 01</title>
+</head>
+<body>
+    <h1 id="data_hora"></h1>
+
+    <script>
+        let dataHora = document.getElementById("data_hora");
+
+        let dataAtual = new Date();
+
+        let diaSemana = dataAtual.getDay();
+        let dia = dataAtual.getDate();
+        let mes = dataAtual.getMonth();
+        let ano = dataAtual.getYear();
+        ano = ano + 1900;
+
+        let texto_diaSemana;
+        let texto_mes;
+
+        let stringData;
+
+        switch(diaSemana){
+            case 0:
+                texto_diaSemana = "Domingo";
+                break;
+            case 1:
+                texto_diaSemana = "Segunda";
+                break;
+            case 2:
+                texto_diaSemana = "Terça";
+                break;
+            case 3:
+                texto_diaSemana = "Quarta";
+                break;
+            case 4:
+                texto_diaSemana = "Quinta";
+                break;
+            case 5:
+                texto_diaSemana = "Sexta";
+                break;
+            case 6:
+                texto_diaSemana = "Sábado";
+                break;
+        }
+
+        switch(mes){
+            case 0:
+                texto_mes = "Janeiro";
+                break;
+            case 1:
+                texto_mes = "Fevereiro";
+                break;
+            case 2:
+                texto_mes = "Março";
+                break;
+            case 3:
+                texto_mes = "Abril";
+                break;
+            case 4:
+                texto_mes = "Maio";
+                break;
+            case 5:
+                texto_mes = "Junho";
+                break;
+            case 6:
+                texto_mes = "Julho";
+                break;
+            case 7:
+                texto_mes = "Agosto";
+                break;
+            case 8:
+                texto_mes = "Setembro";
+                break;
+            case 9:
+                texto_mes = "Outubro";
+                break;
+            case 10:
+                texto_mes = "Novembro";
+                break;
+            case 11:
+                texto_mes = "Dezembro";
+                break;
+
+        }
+
+        stringData = texto_diaSemana + ", " + dia + " de " + texto_mes + " de " + ano;
+        dataHora.innerText = stringData;
+    </script>
+</body>
+</html>

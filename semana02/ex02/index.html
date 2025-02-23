@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 02</title>
+</head>
+<body>
+    <h1 id="hora"></h1>
+
+    <script>
+        let horas = document.getElementById("hora");
+        
+        setInterval(() => {
+            let dataAtual = new Date();
+            let stringHoras;
+            let hora = dataAtual.getHours();
+            let minutos = dataAtual.getMinutes();
+            let segundos = dataAtual.getSeconds();
+
+            stringHoras = hora + ":" + minutos + ":" + segundos;
+            horas.innerText = stringHoras;
+        }, 1000);
+    </script>
+</body>
+</html>
