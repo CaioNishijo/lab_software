@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando array</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" id="forms">
+        <label for="valor">Digite algum valor:</label>
+        <div id="input">
+            <input type="text"id="valor">
+            <button type="submit" id="add">+</button>
+        </div>
+    </form>
+
+    <ol id="lista">
+
+    </ol>
+
+    <script>
+        const form = document.getElementById("forms");
+        let inputValor = document.getElementById("valor");
+        let lista = document.getElementById("lista");
+        let submitBtn = document.getElementById("add");
+        let array_numeros = [];
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+        });
+
+        submitBtn.addEventListener("click", () => {
+            let valor = inputValor.value;
+
+            array_numeros.push(valor);
+
+            array_numeros.sort((a, b) => a.localeCompare(b));
+
+            lista.innerHTML = "";
+
+            array_numeros.forEach(item => {
+                const novoItem = document.createElement("li");
+                novoItem.textContent = item;
+                lista.appendChild(novoItem);
+            });
+
+            inputValor.value = "";
+        })
+    </script>
+</body>
+</html>
