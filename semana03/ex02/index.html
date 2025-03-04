@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Carro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <h2>Formulário de Carro</h2>
+    <form id="carForm">
+        <div class="form-row">
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" name="marca" required>
+        </div>
+        <div class="form-row">
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" required>
+        </div>
+        <div class="form-row">
+            <label for="ano">Ano:</label>
+            <input type="number" id="ano" name="ano" required>
+        </div>
+        <div class="form-row">
+            <label for="cor">Cor:</label>
+            <input type="text" id="cor" name="cor" required>
+        </div>
+        <div class="form-row">
+            <label for="kilometragem">Kilometragem:</label>
+            <input type="number" id="kilometragem" name="kilometragem" required>
+        </div>
+        <div class="form-row">
+            <label for="valor_fipe">Valor FIPE:</label>
+            <input type="number" id="valor_fipe" name="valor_fipe" required>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h3>Resultado:</h3>
+    <p id="resultado"></p>
+
+    <script>
+        let form = document.getElementById('carForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const marca = document.getElementById('marca').value;
+            const modelo = document.getElementById('modelo').value;
+            const ano = parseInt(document.getElementById('ano').value);
+            const cor = document.getElementById('cor').value;
+            const kilometragem = parseInt(document.getElementById('kilometragem').value);
+            const valor_fipe = parseFloat(document.getElementById('valor_fipe').value);
+
+            const carro = {
+                marca: marca,
+                modelo: modelo,
+                ano: ano,
+                cor: cor,
+                kilometragem: kilometragem,
+                valor_fipe: valor_fipe,
+                anosUtilizacao: function() {
+                    const anoAtual = new Date().getFullYear();
+                    return anoAtual - this.ano;
+                },
+                valorMercado: function() {
+                    const kmPorAno = this.kilometragem / this.anosUtilizacao();
+                    if (kmPorAno <= 30000) {
+                        return this.valor_fipe * 1.10;
+                    } else if (kmPorAno > 30000 && kmPorAno <= 50000) {
+                        return this.valor_fipe;
+                    } else {
+                        return this.valor_fipe * 0.90;
+                    }
+                }
+            };
+
+            const resultado = `Anos de utilização: ${carro.anosUtilizacao()}<br>Valor de mercado: R$ ${carro.valorMercado().toFixed(2)}`;
+            document.getElementById('resultado').innerHTML = resultado;
+            });
+    </script>
+</body>
+</html>
