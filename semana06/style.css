@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#calculadora{
+    width: 30%;
+    margin: 1em auto;
+    text-align: end;
+    font-size: 3em;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    padding: .5em;
+    border-radius: 10px;
+}
+.botoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: .1em;
+    column-gap: 0em;
+}
+.botoes button{
+    width: 6em;
+    height: 6em;
+    border-radius: 5px;
+}
+.visor{
+    margin-bottom: 1em;
+    height: 57px;
+    background-color: lightgray;
+}
