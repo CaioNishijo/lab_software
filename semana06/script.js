@@ -5,8 +5,8 @@ const visor = criarDivVisor();
 const botoes = criarDivBotoes();
 
 criarBotao('C', 'clear');
-criarBotao('---', 'null');
-criarBotao('---', 'null');
+criarBotao('', 'null');
+criarBotao('', 'null');
 criarBotao('+', 'op');
 criarBotao('1', 'num');
 criarBotao('2', 'num');
