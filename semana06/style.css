@@ -25,9 +25,11 @@
     height: 6em;
     border-radius: 10px;
     width: 100%;
+    font-weight: bold;
 }
 .botoes button:hover{
     cursor: pointer;
+    opacity: .8;
 }
 .visor{
     margin-bottom: 1em;
