@@ -5,21 +5,24 @@ const visor = criarDivVisor();
 const botoes = criarDivBotoes();
 
 criarBotao('C', 'clear');
+criarBotao('null', 'null');
+criarBotao('null', 'null');
 criarBotao('+', 'op');
-criarBotao('-', 'op');
-criarBotao('*', 'op');
 criarBotao('1', 'num');
 criarBotao('2', 'num');
 criarBotao('3', 'num');
-criarBotao('/', 'op');
+criarBotao('-', 'op');
 criarBotao('4', 'num');
 criarBotao('5', 'num');
 criarBotao('6', 'num');
-criarBotao('=', 'igual');
+criarBotao('/', 'op');
 criarBotao('7', 'num');
 criarBotao('8', 'num');
 criarBotao('9', 'num');
+criarBotao('*', 'op');
 criarBotao('0', 'num');
+criarBotao('.', 'num');
+criarBotao('=', 'igual');
 
 document.addEventListener('click', (event) => {
     if(event.target.tagName === 'BUTTON'){

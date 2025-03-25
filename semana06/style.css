@@ -15,17 +15,39 @@
 }
 .botoes{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     row-gap: .1em;
-    column-gap: 0em;
+    column-gap: .1em;
 }
 .botoes button{
+    border: none;
     width: 6em;
     height: 6em;
-    border-radius: 5px;
+    border-radius: 10px;
+    width: 100%;
+}
+.botoes button:hover{
+    cursor: pointer;
 }
 .visor{
     margin-bottom: 1em;
     height: 57px;
     background-color: lightgray;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.igual {
+    grid-column: span 2;
+}
+.clear{
+    color: red;
+}
+.op, .null{
+    background-color: lightgray;
+    border: 1px solid lightgray;
+}
+.igual{
+    background-color: blueviolet;
+    color: #fdfdfd;
 }
