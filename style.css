@@ -10,8 +10,8 @@
     margin: 1em 2%;
 }
 .title h1{
-    text-transform: uppercase;
-    font-size: 1.7em;
+    font-size: 4em;
+    font-family: 'Italiana', sans-serif;
 }
 .title hr{
     margin-top: .3em;
@@ -26,10 +26,12 @@
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     padding: .3em;
     margin-bottom: .3em;
-    text-transform: uppercase;
+    font-size: 2em;
+    font-family: "Advent Pro", sans-serif;
 }
 .semana:hover{
-    background-color: #AAAAAA;
+    background-color: #2e45a4;
+    color: #fdfdfd;
     cursor: pointer;
 }
 .lista ul{
@@ -43,14 +45,15 @@
 .lista a{
     border-radius: 5px;
     text-decoration: none;
-    font-size: 1.2em;
-    text-transform: uppercase;
+    font-size: 1.5em;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     padding: .3em;
     font-weight: bold;
+    font-family: "Advent Pro", sans-serif;
 }
 .lista a:hover{
-    background-color: #AAAAAA;
+    background-color: #2e45a4;
+    color: #fdfdfd;
 }
 div.lista > ul:nth-child(2) {
     display: none;

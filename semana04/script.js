@@ -51,8 +51,10 @@ radios.forEach(radio => {
 
         if(selecionado == "aluno"){
             criarFormAluno();
+            removerFormProfessor();
         } else if(selecionado == "professor"){
             criarFormProfessor();
+            removerFormAluno();
         }
       }
     });
@@ -77,6 +79,8 @@ form.addEventListener("submit", (e) => {
 function criarFormAluno(){
     const divFormAluno = document.getElementById("form-aluno");
 
+    divFormAluno.innerHTML = "";
+
     let labelCurso = document.createElement('label');
     let inputCurso = document.createElement('input');
     labelCurso.innerText = "Curso";
@@ -95,6 +99,8 @@ function criarFormAluno(){
 
 function criarFormProfessor(){
     const divFormProfessor = document.getElementById("form-professor");
+
+    divFormProfessor.innerHTML = "";
 
     let labelArea = document.createElement('label');
     let inputArea = document.createElement('input');
@@ -117,6 +123,18 @@ function criarFormProfessor(){
     divFormProfessor.appendChild(inputMatricula);
     divFormProfessor.appendChild(labelLattes);
     divFormProfessor.appendChild(inputLattes);
+}
+
+function removerFormProfessor(){
+    const divFormProfessor = document.getElementById("form-professor");
+
+    divFormProfessor.innerHTML = "";
+}
+
+function removerFormAluno(){
+    const divFormAluno = document.getElementById("form-aluno");
+
+    divFormAluno.innerHTML = "";
 }
 
 function preencherFormAluno(){
